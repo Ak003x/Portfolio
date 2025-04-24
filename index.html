@@ -183,18 +183,18 @@
     <h2 class="heading">Contact  <span>Me !</span></h2>
 
     <form action="#">
-        <div class="input_box">
-            <input type="text" placeholder=" Full Name">
-            <input type="Email" placeholder=" Email">
-        </div>
-
-        <div class="input_box">
-            <input type="number" placeholder=" Mobile Phone">
-            <input type="text" placeholder=" Email Subject">
-        </div>
-        <textarea name="" id="" cols="30" rows="10" placeholder=" Your Message"></textarea>
-        <input type="submit" value="Send Message" class="btn">
-    </form>
+        <form action="#">
+            <div class="input_box">
+                <input type="text" name="name" placeholder="Full Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+            </div>
+            <div class="input_box">
+                <input type="number" name="phone" placeholder="Mobile Phone" required>
+                <input type="text" name="subject" placeholder="Email Subject">
+            </div>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <input type="submit" value="Send Message" class="btn">
+        </form>
 </section>
 
 <footer class="footer">
@@ -212,6 +212,22 @@
 <!-- !typed js ------------------------------------------------>
 <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 
- <script src="script.js"></script>   
+
+
+<!-- Popup Message -->
+
+
+<!-- Popup Message -->
+<div id="popup" class="popup hidden">
+    <i class='bx bx-check-circle'></i>
+    <p>Message Sent!</p>
+  </div>
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+    (function () {
+        emailjs.init('dppYulaqHEJ3dxnj'); // Replace with your EmailJS user ID
+    })();
+</script>
+  <script src="script.js"></script>
 </body>
 </html>

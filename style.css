@@ -652,3 +652,75 @@ span {
     margin-top: 2rem;
   }
 }
+/* Popup Message */
+
+.popup {
+  position: fixed;
+  bottom: 2rem; /* Position the popup 2rem from the bottom */
+  right: 2rem; /* Position the popup 2rem from the right */
+  background: var(--main-color); /* Matches portfolio color */
+  color: var(--bg-color); /* Text color */
+  padding: 1.5rem 3rem; /* Adjust padding for a compact look */
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem var(--main-color);
+  font-size: 1.6rem; /* Slightly smaller font size */
+  font-weight: 600;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease, transform 0.5s ease; /* Smooth transition */
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Vertically align items */
+  gap: 1rem; /* Add space between the icon and text */
+  transform: translateY(100%); /* Start off-screen */
+}
+
+.popup i {
+  font-size: 2.5rem; /* Adjust icon size */
+  color: var(--bg-color); /* Matches text color */
+}
+
+.popup p {
+  margin: 0;
+  flex: 1; /* Allow the text to take up remaining space */
+}
+
+/* Animation for showing the popup */
+.popup.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0); /* Slide into view */
+  animation: slideIn 0.5s ease; /* Slide-in effect when appearing */
+}
+
+/* Animation for hiding the popup */
+.popup.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(100%); /* Slide out of view */
+  animation: slideOut 0.5s ease; /* Slide-out effect when disappearing */
+}
+
+/* Keyframes for slide-in animation */
+@keyframes slideIn {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Keyframes for slide-out animation */
+@keyframes slideOut {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
