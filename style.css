@@ -415,70 +415,77 @@ span {
   font-size: 2rem var(--second-bg-color);
 }
 
-.contact h2 {
-  margin-bottom: 3rem;
+/* Contact Section */
+
+/* Contact Section */
+/* Contact Section */
+.contact {
+  background-color: var(--second-bg-color);
+  padding: 8rem 10%; /* Adjusted padding for better spacing */
+  margin-bottom: 0;
+}
+
+.contact .heading {
+  font-size: 4rem; /* Proper heading size */
+  text-align: center;
+  margin-bottom: 4rem; /* Adjusted margin for spacing */
+  transition: transform 0.3s ease;
+}
+
+.contact .heading:hover {
+  transform: translateY(-10px);
 }
 
 .contact form {
-  max-width: 70rem;
-  margin: 1rem auto;
+  max-width: 80rem; /* Proper form width */
+  margin: 0 auto;
   text-align: center;
-  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center align all elements */
 }
 
 .contact form .input_box {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-}
-
-.contact {
-  background-color: var(--second-bg-color);
-  padding: 50px 0;
-  margin-bottom: 0; /* Ensure no extra margin at the bottom */
-}
-
-.contact .heading {
-  text-align: center;
-  font-size: 2.5em;
-  margin-bottom: 20px;
-}
-
-.contact .input_box {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
+  width: 100%; /* Ensure input fields take full width */
+  margin-bottom: 2.5rem; /* Adjusted spacing between input fields */
+  gap: 2rem; /* Proper gap for better spacing */
 }
 
 .contact .input_box input,
 .contact textarea {
-  width: 48%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 1em;
+  flex: 1 1 48%; /* Ensure consistent width for input fields and textarea */
+  padding: 2rem; /* Adjusted padding for better usability */
+  border: 1px solid #ccc; /* Added border for visibility */
+  border-radius: 1rem;
+  font-size: 1.6rem; /* Proper font size */
   background-color: var(--bg-color);
   color: var(--text-color);
 }
 
 .contact textarea {
-  width: 100%;
-  height: 150px;
-  resize: none;
+  flex: 1 1 100%; /* Full width for textarea */
+  height: 200px; /* Proper height for textarea */
+  resize: none; /* Disable resizing for consistency */
+  margin-top: 2rem;
+  width: 100%; /* Match the width of other input fields */
 }
 
 .contact .btn {
-  display: block;
-  width: 100%;
-  padding: 10px;
+  display: inline-block;
+  padding: 1.4rem 4rem; /* Proper button size */
   background: var(--main-color);
   color: var(--bg-color);
   border: none;
-  border-radius: 5px;
-  font-size: 1em;
+  border-radius: 4rem;
+  font-size: 1.8rem; /* Proper font size */
+  font-weight: 600;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: 0.3s ease;
+  margin-top: 2rem; /* Adjusted margin for spacing */
+  align-self: center; /* Center align the button */
 }
 
 .contact .btn:hover {
