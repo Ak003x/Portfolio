@@ -62,11 +62,11 @@ const typed = new Typed('.multiple_text', {
 
 //!-----------------------------------hide menu on link click------------------------------------->
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const navLinks = document.querySelectorAll('.navbar a');
 
     navLinks.forEach(link => {
-        link.addEventListener('click', function() {
+        link.addEventListener('click', function () {
             menuIcon.classList.remove('bx-x');
             navbar.classList.remove('active');
         });
@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Add event listener to the logo
     const logo = document.querySelector('.logo img');
-    logo.addEventListener('click', function() {
+    logo.addEventListener('click', function () {
         logo.classList.add('spin-animation');
         alert("Welcome! I'm Akash, a passionate full-stack developer. Explore my work and feel free to reach out!");
     });
@@ -112,13 +112,13 @@ document.querySelector('.contact form').addEventListener('submit', function (e) 
         subject: subject,
         message: message,
     })
-    .then(() => {
-        showPopup('Message Sent!', true); // Show success popup
-    })
-    .catch((error) => {
-        console.error('EmailJS Error:', error); // Log the error to the console
-        showPopup('Failed to send message.', false); // Show error popup
-    });
+        .then(() => {
+            showPopup('Message Sent!', true); // Show success popup
+        })
+        .catch((error) => {
+            console.error('EmailJS Error:', error); // Log the error to the console
+            showPopup('Failed to send message.', false); // Show error popup
+        });
 });
 
 // Function to show popup
