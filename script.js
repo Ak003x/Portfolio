@@ -82,8 +82,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 //!-----------------------------------popup with validation------------------------------------->
 
-// Show popup on form submission with validation
-
+// Add event listener to the form submission
 document.querySelector('.contact form').addEventListener('submit', function (e) {
     e.preventDefault(); // Prevent default form submission
 
@@ -114,10 +113,11 @@ document.querySelector('.contact form').addEventListener('submit', function (e) 
         message: message,
     })
     .then(() => {
-        showPopup('Message Sent!', true);
+        showPopup('Message Sent!', true); // Show success popup
     })
-    .catch(() => {
-        showPopup('Failed to send message.', false);
+    .catch((error) => {
+        console.error('EmailJS Error:', error); // Log the error to the console
+        showPopup('Failed to send message.', false); // Show error popup
     });
 });
 

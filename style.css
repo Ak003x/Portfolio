@@ -654,6 +654,8 @@ span {
 }
 /* Popup Message */
 
+/* Popup Message */
+
 .popup {
   position: fixed;
   bottom: 2rem; /* Position the popup 2rem from the bottom */
