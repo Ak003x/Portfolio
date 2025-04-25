@@ -84,8 +84,10 @@ section {
   filter: brightness(1.2); /* Brighten the image on hover */
 }
 
-.logo img:active {
-  animation: spin 1s linear infinite; /* Spin animation on click */
+/* --- Removed rotation/spin animation for logo --- */
+
+/* .spin-animation, .logo img:active {
+  animation: spin 1s linear infinite;
 }
 
 @keyframes spin {
@@ -95,11 +97,7 @@ section {
   100% {
     transform: rotate(360deg);
   }
-}
-
-.spin-animation {
-  animation: spin 1s linear infinite;
-}
+} */
 
 .navbar a {
   font-size: 1.7rem;
