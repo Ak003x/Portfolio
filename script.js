@@ -56,10 +56,10 @@ const typed = new Typed('.multiple_text', {
 });
 
 // Hide menu on link click
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const navLinks = document.querySelectorAll('.navbar a');
     navLinks.forEach(link => {
-        link.addEventListener('click', function() {
+        link.addEventListener('click', function () {
             menuIcon.classList.remove('bx-x');
             navbar.classList.remove('active');
         });
@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Logo spin and welcome alert
     const logo = document.querySelector('.logo img');
     if (logo) {
-        logo.addEventListener('click', function() {
+        logo.addEventListener('click', function () {
             logo.classList.add('spin-animation');
             alert("Welcome! I'm Akash, a passionate full-stack developer. Explore my work and feel free to reach out!");
         });
@@ -106,11 +106,11 @@ document.querySelector('.contact form').addEventListener('submit', function (e) 
         subject: subject,
         message: message,
     })
-    .catch((error) => {
-        console.error('EmailJS Error:', error);
-        // If sending fails, show error popup
-        showPopup('Failed to send message.', false);
-    });
+        .catch((error) => {
+            console.error('EmailJS Error:', error);
+            // If sending fails, show error popup
+            showPopup('Failed to send message.', false);
+        });
 });
 
 // Popup function
