@@ -1,7 +1,5 @@
-/* Import Google Fonts */
 @import url("https://fonts.googleapis.com/css?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 
-/* Reset and base styles */
 * {
   margin: 0;
   padding: 0;
@@ -20,7 +18,6 @@
   --main-color: #0ef;
 }
 
-/* Set base font size and prevent horizontal scroll */
 html {
   font-size: 62.5%;
   overflow-x: hidden;
@@ -31,14 +28,12 @@ body {
   color: var(--text-color);
 }
 
-/* Section spacing */
 section {
   min-height: 100vh;
   padding: 10rem 9% 2rem;
   scroll-margin-top: 100px;
 }
 
-/* Header styles */
 .header {
   position: fixed;
   top: 0;
@@ -121,7 +116,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 300px;
+  min-height: 300px; /* Ensures vertical alignment */
 }
 
 .home_image img {
@@ -134,7 +129,6 @@ section {
   animation: floatImage 4s ease-in-out infinite;
 }
 
-/* Floating animation for home image */
 @keyframes floatImage {
   0% {
     transform: translateY(0);
@@ -162,7 +156,6 @@ section {
   font-size: 1.9rem;
 }
 
-/* Social media icons */
 .Social_media a {
   display: inline-flex;
   justify-content: center;
@@ -184,7 +177,6 @@ section {
   box-shadow: 0 0 1rem var(--main-color);
 }
 
-/* Button style */
 .btn {
   display: inline-block;
   padding: 1rem 2.8rem;
